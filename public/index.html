@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>酒丸シリーズ | 酒類卸売業向け統合DXプラットフォーム</title>
+  <meta name="description" content="酒丸シリーズは、酒類卸売業に完全特化したクラウド型統合業務システムです。販売管理・倉庫管理・配送・POS・帳票・分析・検索の7システムをワンプラットフォームで提供します。">
+  <meta property="og:title" content="酒丸シリーズ | 酒類卸売業向け統合DXプラットフォーム">
+  <meta property="og:description" content="伝統と革新の融合。酒類卸売業のすべてを、ひとつに。7つの専門システムがシームレスに連携する統合業務システム。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-main">酒丸</span><span class="logo-sub">シリーズ</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#about">酒丸シリーズとは</a></li>
+          <li><a href="#systems">システム一覧</a></li>
+          <li><a href="#benefits">導入メリット</a></li>
+          <li><a href="#flow">導入の流れ</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- セクション1: ヒーロー -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-main-copy">伝統と革新の融合。</h1>
+      <p class="hero-sub-copy">酒類卸売業のすべてを、ひとつに。</p>
+      <p class="hero-lead">AIによる高度な在庫管理と直感的な操作性で、<br>酒販ビジネスの未来を拓きます。</p>
+      <a href="#about" class="btn btn-primary hero-cta">酒丸シリーズを見る</a>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- セクション2: 酒丸シリーズとは -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <h2 class="section-title">酒丸シリーズとは</h2>
+          <p>酒丸シリーズは、酒類卸売業に完全特化したクラウド型統合業務システムです。</p>
+          <p>販売管理・倉庫管理・小売管理・配送回収・請求書管理・統計分析・高度検索の7つの専門システムが、ひとつのデータベースでシームレスに連携。</p>
+          <p>受注から出荷、集金から決算まで、酒類卸売業のあらゆる業務をワンプラットフォームでカバーします。</p>
+        </div>
+        <div class="about-image animate-on-scroll">
+          <img src="images/system-overall.png" alt="酒丸シリーズ システム全体像" loading="lazy">
+        </div>
+      </div>
+      <div class="stats-grid animate-on-scroll">
+        <div class="stat-card">
+          <span class="stat-number" data-count="7">0</span>
+          <span class="stat-label">システム連携</span>
+          <span class="stat-desc">業務の全領域をカバー</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="200" data-suffix="+">0</span>
+          <span class="stat-label">業務機能</span>
+          <span class="stat-desc">酒販業に必要な機能を網羅</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number stat-text" data-text="SSO">SSO</span>
+          <span class="stat-label">シームレスアクセス</span>
+          <span class="stat-desc">1回のログインで全システム利用</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セクション3: システム全体像（アーキテクチャ図） -->
+  <section class="section architecture" id="architecture">
+    <div class="container">
+      <h2 class="section-title section-title-light animate-on-scroll">7つのシステムが、ひとつに。</h2>
+      <div class="architecture-diagram" id="architecture-diagram">
+        <!-- 上層: 分析・検索 -->
+        <div class="arch-layer arch-layer-top">
+          <div class="arch-node" data-system="soroban" data-target="system-soroban">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2"/><line x1="10" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/><circle cx="24" cy="22" r="2.5" fill="currentColor"/><circle cx="20" cy="28" r="2.5" fill="currentColor"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸算盤</span>
+            <span class="arch-node-sub">データ分析</span>
+            <div class="arch-tooltip">売上・在庫データを多角的に分析</div>
+          </div>
+          <div class="arch-node" data-system="senrigan" data-target="system-senrigan">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="18" cy="18" r="10" stroke="currentColor" stroke-width="2"/><line x1="25" y1="25" x2="34" y2="34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18" cy="18" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸千里眼</span>
+            <span class="arch-node-sub">高度検索</span>
+            <div class="arch-tooltip">膨大な商品情報をAI連携で高速検索</div>
+          </div>
+        </div>
+
+        <!-- 接続線（上層→コア） -->
+        <div class="arch-connector arch-connector-vertical"></div>
+
+        <!-- 中央: 基幹コア -->
+        <div class="arch-layer arch-layer-core">
+          <div class="arch-node arch-node-core" data-system="kanjoshu" data-target="system-kanjoshu">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="32" height="28" rx="4" stroke="currentColor" stroke-width="2"/><path d="M4 14h32" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="18" width="10" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="22" y="18" width="10" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="26" width="24" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸勘定衆</span>
+            <span class="arch-node-sub">基幹コア</span>
+            <span class="arch-node-detail">受注 / 売上 / 請求 / 入金 / 在庫連動 / マスタ</span>
+            <div class="arch-tooltip">受注・売上・請求・入金を一元管理する基幹システム</div>
+          </div>
+        </div>
+
+        <!-- 接続線（コア→業務） -->
+        <div class="arch-connector arch-connector-triple">
+          <div class="arch-connector-line"></div>
+          <div class="arch-connector-line"></div>
+          <div class="arch-connector-line"></div>
+        </div>
+
+        <!-- 下層: 業務システム -->
+        <div class="arch-layer arch-layer-operations">
+          <div class="arch-node" data-system="kura" data-target="system-kura">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><path d="M6 16L20 6l14 10v18H6V16z" stroke="currentColor" stroke-width="2"/><rect x="14" y="22" width="12" height="12" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="22" x2="20" y2="34" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸蔵</span>
+            <span class="arch-node-sub">倉庫管理</span>
+            <div class="arch-tooltip">入荷から出荷まで倉庫業務を最適化</div>
+          </div>
+          <div class="arch-node" data-system="noren" data-target="system-noren">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/><rect x="12" y="28" width="16" height="8" rx="2" stroke="currentColor" stroke-width="2"/><line x1="20" y1="26" x2="20" y2="28" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸乃蓮</span>
+            <span class="arch-node-sub">POS・小売</span>
+            <div class="arch-tooltip">POS連携・店舗運営を統合管理</div>
+          </div>
+          <div class="arch-node" data-system="hikyaku" data-target="system-hikyaku">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="10" width="24" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M28 14h6l4 6v6h-10V14z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="30" r="4" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="30" r="4" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸飛脚</span>
+            <span class="arch-node-sub">配送・回収</span>
+            <div class="arch-tooltip">配送・容器回収・集金を現場で完結</div>
+          </div>
+        </div>
+
+        <!-- 接続線（業務→帳票） -->
+        <div class="arch-connector arch-connector-vertical"></div>
+
+        <!-- 最下層: 帳票 -->
+        <div class="arch-layer arch-layer-bottom">
+          <div class="arch-node arch-node-wide" data-system="choba" data-target="system-choba">
+            <div class="arch-node-icon">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="4" width="24" height="32" rx="3" stroke="currentColor" stroke-width="2"/><line x1="14" y1="12" x2="26" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="18" x2="26" y2="18" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="24" x2="22" y2="24" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <span class="arch-node-name">酒丸帳場</span>
+            <span class="arch-node-sub">請求書・帳票管理</span>
+            <div class="arch-tooltip">請求書・帳票を取引先と共有管理</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セクション4: 各システム紹介 -->
+  <section class="section system-details" id="systems">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">システム一覧</h2>
+
+      <!-- 勘定衆 -->
+      <div class="system-card animate-on-scroll" id="system-kanjoshu">
+        <div class="system-card-image">
+          <img src="images/sakemaru-ai-core-login.png" alt="酒丸勘定衆 ログイン画面" loading="lazy">
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸勘定衆<span class="system-reading">かんじょうしゅう</span></h3>
+            <span class="system-subtitle">販売管理システムコア（基幹システム）</span>
+          </div>
+          <p class="system-desc">酒丸シリーズの中核となる基幹システム。受注・売上・請求・入金・在庫連動など、酒類流通業に必要な業務を一元管理します。</p>
+          <ul class="system-features">
+            <li>受注管理</li>
+            <li>売上・請求管理</li>
+            <li>入金・債権管理</li>
+            <li>在庫連動管理</li>
+            <li>マスタ管理（商品・取引先・価格）</li>
+            <li>各システムとのデータ連携ハブ</li>
+          </ul>
+          <div class="system-highlights">
+            <span>酒販業特化の業務ロジック</span>
+            <span>大量データ処理に対応した高性能設計</span>
+            <span>WMS・POS・分析基盤とリアルタイム連携</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 蔵 -->
+      <div class="system-card system-card-reverse animate-on-scroll" id="system-kura">
+        <div class="system-card-image">
+          <img src="images/sakemaru-wms-login.png" alt="酒丸蔵 ログイン画面" loading="lazy">
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸蔵<span class="system-reading">くら</span></h3>
+            <span class="system-subtitle">倉庫管理システム（WMS）</span>
+          </div>
+          <p class="system-desc">入荷から出荷までの倉庫業務を最適化するシステム。ピッキング効率の向上・欠品削減・作業可視化を実現します。</p>
+          <ul class="system-features">
+            <li>入荷管理（予定・検品・確定）</li>
+            <li>出荷管理（出荷計画・波動出荷）</li>
+            <li>ピッキング管理（1次・2次・3次ピッキング）</li>
+            <li>発注管理（発注点・自動発注）</li>
+            <li>在庫管理（ロケーション・リアルタイム在庫）</li>
+            <li>作業進捗管理</li>
+          </ul>
+          <div class="system-highlights">
+            <span>酒類物流に最適化されたピッキング設計</span>
+            <span>波動出荷・多拠点対応</span>
+            <span>在庫精度の大幅向上</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 乃蓮 -->
+      <div class="system-card animate-on-scroll" id="system-noren">
+        <div class="system-card-image">
+          <img src="images/sakemaru-trade-login.png" alt="酒丸乃蓮 ログイン画面" loading="lazy">
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸乃蓮<span class="system-reading">のれん</span></h3>
+            <span class="system-subtitle">POS・小売管理システム</span>
+          </div>
+          <p class="system-desc">店舗での販売業務を支える小売管理システム。売上処理だけでなく在庫・顧客・販売分析にも対応します。</p>
+          <ul class="system-features">
+            <li>POSレジ機能</li>
+            <li>商品販売管理</li>
+            <li>在庫連動管理</li>
+            <li>売上集計・締め処理</li>
+            <li>割引・セット販売対応</li>
+            <li>キャッシュ管理</li>
+          </ul>
+          <div class="system-highlights">
+            <span>酒販特有の販売形態に対応（グラス売り・ケース売りなど）</span>
+            <span>直感的な操作性</span>
+            <span>基幹システムとのリアルタイム連携</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 飛脚 -->
+      <div class="system-card system-card-reverse animate-on-scroll" id="system-hikyaku">
+        <div class="system-card-image">
+          <div class="system-card-image-group">
+            <img src="images/sakemaru-delivery-login.png" alt="酒丸飛脚 Web版ログイン画面" loading="lazy">
+            <img src="images/sakemaru-delivery-android-login.png" alt="酒丸飛脚 モバイル版ログイン画面" class="system-card-image-mobile" loading="lazy">
+          </div>
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸飛脚<span class="system-reading">ひきゃく</span></h3>
+            <span class="system-subtitle">配送・集荷・現金回収システム</span>
+          </div>
+          <p class="system-desc">配送業務と現金回収業務を一体化した物流支援システム。伝票処理・配送進捗・回収金管理を効率化します。</p>
+          <ul class="system-features">
+            <li>配送指示管理</li>
+            <li>集荷・横持ち管理</li>
+            <li>現金回収管理</li>
+            <li>配送伝票発行</li>
+            <li>配送進捗管理</li>
+            <li>モバイル端末対応</li>
+          </ul>
+          <div class="system-highlights">
+            <span>配送ルート単位の業務管理</span>
+            <span>回収金のミス削減</span>
+            <span>倉庫・基幹とのシームレス連携</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 千里眼 -->
+      <div class="system-card animate-on-scroll" id="system-senrigan">
+        <div class="system-card-image">
+          <img src="images/sakemaru-search-login.png" alt="酒丸千里眼 ログイン画面" loading="lazy">
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸千里眼<span class="system-reading">せんりがん</span></h3>
+            <span class="system-subtitle">高度商品検索サイト（AI連携検索基盤）</span>
+          </div>
+          <p class="system-desc">膨大な商品情報を高速かつ高度に検索できる情報基盤。AI / GPTとの連携により、営業・発注・分析を支援します。</p>
+          <ul class="system-features">
+            <li>商品横断検索</li>
+            <li>検索コード管理</li>
+            <li>商品属性検索（容量・分類・価格帯など）</li>
+            <li>AI向け商品データ提供</li>
+            <li>類似商品検索</li>
+          </ul>
+          <div class="system-highlights">
+            <span>高速全文検索エンジン搭載</span>
+            <span>AI活用前提のデータ構造</span>
+            <span>営業効率の大幅向上</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 算盤 -->
+      <div class="system-card system-card-reverse animate-on-scroll" id="system-soroban">
+        <div class="system-card-image system-card-image-placeholder">
+          <div class="image-placeholder">
+            <svg viewBox="0 0 80 80" fill="none"><rect x="12" y="16" width="56" height="48" rx="6" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="60" y2="32" stroke="currentColor" stroke-width="1.5"/><line x1="20" y1="42" x2="60" y2="42" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="32" r="4" fill="currentColor"/><circle cx="48" cy="42" r="4" fill="currentColor"/><circle cx="40" cy="52" r="4" fill="currentColor"/></svg>
+            <span>酒丸算盤</span>
+          </div>
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸算盤<span class="system-reading">そろばん</span></h3>
+            <span class="system-subtitle">高度データ分析サイト</span>
+          </div>
+          <p class="system-desc">販売・在庫・利益などのデータを多角的に分析する意思決定支援システム。経営・現場双方の判断スピードを向上させます。</p>
+          <ul class="system-features">
+            <li>売上分析</li>
+            <li>利益分析</li>
+            <li>商品回転分析</li>
+            <li>発注点分析（季節変動対応）</li>
+            <li>倉庫効率分析</li>
+            <li>ダッシュボード表示</li>
+          </ul>
+          <div class="system-highlights">
+            <span>大量データの高速集計</span>
+            <span>BIツールレベルの分析機能</span>
+            <span>AI分析基盤との連携</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 帳場 -->
+      <div class="system-card animate-on-scroll" id="system-choba">
+        <div class="system-card-image">
+          <img src="images/sakemaru-documents-login.png" alt="酒丸帳場 ログイン画面" loading="lazy">
+        </div>
+        <div class="system-card-content">
+          <div class="system-card-header">
+            <h3 class="system-name">酒丸帳場<span class="system-reading">ちょうば</span></h3>
+            <span class="system-subtitle">請求書・帳票管理システム</span>
+          </div>
+          <p class="system-desc">請求書・帳票の発行・受領・保管・修正依頼をオンラインで一元管理。取引先パートナーポータルにより、社外との帳票やり取りもシステム内で完結します。</p>
+          <ul class="system-features">
+            <li>請求書一元管理</li>
+            <li>取引先パートナーポータル</li>
+            <li>チャット型修正依頼</li>
+            <li>段階的安全同期</li>
+            <li>帳票ファイル保管（改ざん検知付き）</li>
+          </ul>
+          <div class="system-highlights">
+            <span>取引先もログインして帳票確認可能</span>
+            <span>リアルタイムチャットで修正依頼</span>
+            <span>電子帳簿保存法対応</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セクション5: 導入メリット -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">酒丸シリーズで、何が変わるのか</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="14" height="20" rx="3" stroke="currentColor" stroke-width="2"/><rect x="28" y="14" width="14" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M20 20h8M20 24h8M20 28h8" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/></svg>
+          </div>
+          <h3>在庫精度の劇的向上</h3>
+          <p>倉庫・店舗・基幹がリアルタイムで連携するため「在庫はあるはずなのに出荷できない」という問題を解消。</p>
+          <ul>
+            <li>欠品削減</li>
+            <li>過剰在庫削減</li>
+            <li>発注精度向上</li>
+          </ul>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M10 34L20 24l6 6 12-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 38h36" stroke="currentColor" stroke-width="2"/><path d="M6 38V10" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>倉庫生産性の向上</h3>
+          <p>波動出荷・多段階ピッキングに対応し作業時間と人員を大幅削減。</p>
+          <ul>
+            <li>ピッキング効率向上</li>
+            <li>出荷リードタイム短縮</li>
+            <li>作業の標準化</li>
+          </ul>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>売上・利益の可視化</h3>
+          <p>全データが統合されることでリアルタイム経営判断が可能。</p>
+          <ul>
+            <li>商品別利益分析</li>
+            <li>得意先別粗利分析</li>
+            <li>在庫回転率分析</li>
+          </ul>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M14 10h20v28H14z" stroke="currentColor" stroke-width="2" rx="2"/><path d="M20 18h8M20 24h8M20 30h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 14l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 26l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>属人業務の排除</h3>
+          <p>配送管理・回収管理・発注判断など人に依存していた業務をシステム化。</p>
+          <ul>
+            <li>ミス削減</li>
+            <li>教育コスト削減</li>
+            <li>組織スケール可能</li>
+          </ul>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2"/><path d="M18 20c0-3.3 2.7-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 34c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="20" r="3" fill="currentColor" opacity="0.3"/><path d="M34 16l4-4M10 16l-4-4M24 6V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>AI活用基盤の構築</h3>
+          <p>商品検索・需要分析・営業支援などAI活用を前提としたデータ構造。</p>
+          <ul>
+            <li>将来拡張が可能</li>
+            <li>AI導入コスト削減</li>
+            <li>データ資産化</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セクション6: 導入フロー -->
+  <section class="section flow" id="flow">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">酒丸シリーズの導入ステップ</h2>
+      <p class="section-subtitle animate-on-scroll">最短2週間で稼働開始。段階導入にも対応します。</p>
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <span class="timeline-step">01</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>お問い合わせ</h3>
+              <span class="timeline-duration">1〜2日</span>
+            </div>
+            <p>まずはお気軽にご連絡ください。担当者から折り返しご連絡いたします。</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <span class="timeline-step">02</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>ヒアリング</h3>
+              <span class="timeline-duration">1〜2週間</span>
+            </div>
+            <p>現在の業務フローと課題をヒアリングします。御社の業務に最適なシステム構成をご提案するための重要なステップです。</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <span class="timeline-step">03</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>ご提案・お見積り</h3>
+              <span class="timeline-duration">1週間</span>
+            </div>
+            <p>ヒアリング結果をもとに、最適なシステム構成と導入プランをご提案します。段階導入にも対応しています。</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <span class="timeline-step">04</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>環境構築</h3>
+              <span class="timeline-duration">1〜2週間</span>
+            </div>
+            <p>御社専用のクラウド環境を構築します。SaaSのため、サーバー調達やインフラ構築は不要です。</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <span class="timeline-step">05</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>データ移行・研修</h3>
+              <span class="timeline-duration">2〜4週間</span>
+            </div>
+            <p>既存システムからのデータ移行と、ユーザーの役割に応じた研修プログラムを実施します。並行稼働期間で安全に切り替え。</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <span class="timeline-step">06</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>本番稼働・運用サポート</h3>
+              <span class="timeline-duration">継続</span>
+            </div>
+            <p>本番稼働後も安心のサポート体制で運用をバックアップします。システムアップデートは自動配信されます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セクション7: FAQ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">よくあるご質問</h2>
+
+      <div class="faq-category animate-on-scroll">
+        <h3 class="faq-category-title">導入について</h3>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>導入にはどのくらいの期間がかかりますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>基幹モジュール（酒丸勘定衆）単体であれば最短2週間で稼働開始できます。全モジュールの導入＋データ移行を含む場合は、1〜2ヶ月程度が目安です。段階的な導入にも対応しておりますので、お気軽にご相談ください。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>全システムを一度に導入する必要がありますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>いいえ。酒丸シリーズはモジュール構造のため、必要なシステムだけを選んで導入できます。例えば「まず基幹（勘定衆）とWMS（蔵）だけ」という導入も可能です。あとから他のモジュールを追加することもできます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>現在使っているシステムからのデータ移行は可能ですか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>可能です。商品マスタ・取引先マスタ・在庫データ・価格データなど、主要なデータの移行をサポートしています。移行方法はヒアリング時にご相談のうえ、最適な方法をご提案いたします。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>導入時の研修はありますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。管理者・事務担当・倉庫担当・配送ドライバー・店舗スタッフなど、ユーザーの役割に応じた研修プログラムをご用意しています。オンラインと現地訪問の両方に対応しています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category animate-on-scroll">
+        <h3 class="faq-category-title">システムについて</h3>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>クラウド型ですか？自社サーバーに設置できますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>クラウド型（SaaS）でのご提供です。サーバーの調達・構築・保守はすべて弊社が行いますので、御社でインフラを管理する必要はありません。システムのアップデートも自動配信されます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>インターネット接続は必須ですか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい、クラウド型のためインターネット接続が必要です。ただし、配送用モバイルアプリ（酒丸飛脚）は一時的なオフライン時でも作業データをローカルに保持し、接続復旧時に自動同期する設計です。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>他社のシステム（EDI・POS等）と連携できますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。酒丸シリーズは多くの外部システムとの連携実績があります。EDI連携（FIT・ITSKY・Infomart・SUMA・Hub等）、POS連携（FTP経由での双方向データ転送）、発注EDI（JX-FINET経由）に対応しています。その他のシステムとの連携も個別にご相談いただけます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>モバイル端末から使えますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。倉庫作業ではハンディ端末（バーコードスキャナー）でのピッキング・入荷検品、配送業務ではスマートフォンアプリで容器回収・集金・領収書発行、管理画面はレスポンシブ対応でタブレットからもアクセス可能です。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>セキュリティ対策はどうなっていますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>SSO（シングルサインオン）、ロールベースアクセス制御、全通信のSSL/TLS暗号化、全操作のIPアドレス付き監査ログ、SHA256ハッシュによる帳票ファイルの改ざん検知、署名付き一時URLによるファイルダウンロードなど、多層的なセキュリティ対策を実施しています。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>同時にログインできるユーザー数に制限はありますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>プランに応じたユーザー数の上限があります。詳しくはお問い合わせください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category animate-on-scroll">
+        <h3 class="faq-category-title">費用について</h3>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>初期費用はどのくらいですか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>導入するモジュールの組み合わせとデータ移行の規模によって異なります。ヒアリング後にお見積りいたしますので、まずはお気軽にお問い合わせください。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>月額利用料はどのように決まりますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>導入モジュール数とユーザー数に基づく月額制です。段階導入の場合は、導入済みモジュールの分だけお支払いいただきます。詳しくはお問い合わせください。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>無料トライアルはありますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>デモ環境でのシステム体験をご用意しています。実際の画面操作を通じて、御社の業務に合うかどうかをご確認いただけます。お問い合わせ時に「デモ希望」とお伝えください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category animate-on-scroll">
+        <h3 class="faq-category-title">運用・サポートについて</h3>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>導入後のサポート体制はどうなっていますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>メールでのサポートを提供しています。システムの操作方法、設定変更のご相談、障害対応などに対応いたします。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>システムのアップデートはどうなりますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>クラウド型のため、アップデートは自動で配信されます。御社での作業は不要です。大きな機能追加の際は、事前にお知らせいたします。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>データのバックアップは取られていますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。日次で自動バックアップを実施しています。障害発生時のデータ復旧体制を整えています。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>契約期間はありますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>最低契約期間はご相談のうえ決定いたします。詳しくはお問い合わせください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category animate-on-scroll">
+        <h3 class="faq-category-title">業界特有の質問</h3>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>酒税区分の管理に対応していますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。軽減税率（8%）・標準税率（10%）・非課税の3区分をシステム全体で厳密に管理しています。請求書・帳票・容器回収・POS精算すべてで税率区分が反映されます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>容器（空瓶・空樽）の管理はできますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。酒丸勘定衆で容器引取・返却・ダイレクトの管理を、酒丸飛脚で現場での容器回収記録をサポートしています。回収データは基幹システムに自動連携されます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>複数倉庫に対応していますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい。酒丸蔵（WMS）は複数倉庫に対応しています。倉庫間の在庫移動、倉庫ごとの設定（カレンダー・ロケーション等）も管理できます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>電子帳簿保存法に対応していますか？</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>酒丸帳場（請求書管理システム）は、電子帳簿保存法への対応を支援する機能を搭載しています。SHA256ハッシュによる改ざん検知、構造化パスでの保管、監査ログによる操作履歴の記録を標準で提供しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- セクション8: お問い合わせ（CTA） -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner animate-on-scroll">
+        <h2 class="section-title section-title-light">まずはお気軽にご相談ください</h2>
+        <p class="contact-text">酒丸シリーズの導入に関するご質問・デモのご依頼は<br>下記メールアドレスまでお問い合わせください。</p>
+        <div class="contact-cta-group">
+          <a href="#contact" class="btn btn-primary btn-lg">資料請求</a>
+          <a href="#contact" class="btn btn-outline btn-lg">デモを依頼する</a>
+        </div>
+        <div class="contact-email">
+          <img src="images/contact-email.svg" alt="お問い合わせメールアドレス">
+          <p class="contact-email-note">※迷惑メール防止のため、メールアドレスは画像で表示しています</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">酒丸シリーズ</span>
+          <p class="footer-company">Smart Life LLC</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#about">酒丸シリーズとは</a></li>
+            <li><a href="#systems">システム一覧</a></li>
+            <li><a href="#benefits">導入メリット</a></li>
+            <li><a href="#flow">導入の流れ</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Smart Life LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

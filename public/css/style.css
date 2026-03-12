@@ -1,0 +1,1434 @@
+/* ============================================
+   酒丸シリーズ ホームページ - スタイルシート
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* カラーパレット */
+  --color-navy: #1e293b;
+  --color-navy-dark: #0f172a;
+  --color-crimson: #c53d43;
+  --color-crimson-dark: #a33038;
+  --color-gold: #c69c3f;
+  --color-amber: #d97706;
+  --color-washi: #f7f4ed;
+  --color-card-bg: #fefcf6;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #6b7280;
+  --color-white: #ffffff;
+  --color-border: #e5e1d8;
+
+  /* システムカラー */
+  --color-kanjoshu: #c53d43;
+  --color-kura: #2563eb;
+  --color-noren: #059669;
+  --color-hikyaku: #d97706;
+  --color-senrigan: #7c3aed;
+  --color-soroban: #0891b2;
+  --color-choba: #dc2626;
+
+  /* フォント */
+  --font-heading: 'Shippori Mincho', serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+
+  /* スペーシング */
+  --section-padding: 100px;
+  --container-max: 1200px;
+
+  /* その他 */
+  --header-height: 72px;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+  --transition: 0.3s ease;
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-dark);
+  background-color: var(--color-washi);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-navy);
+}
+
+.section-title-light {
+  color: var(--color-white);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 48px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--color-crimson);
+  color: var(--color-white);
+  border-color: var(--color-crimson);
+}
+
+.btn-primary:hover {
+  background: var(--color-crimson-dark);
+  border-color: var(--color-crimson-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(197, 61, 67, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-navy);
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 16px 44px;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   ヘッダー
+   ============================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background var(--transition);
+}
+
+.site-header.scrolled {
+  background: rgba(30, 41, 59, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.logo-main {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.logo-sub {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.main-nav a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color var(--transition);
+  position: relative;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--color-white);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  background: var(--color-crimson) !important;
+  color: var(--color-white) !important;
+  padding: 8px 20px !important;
+  border-radius: 6px !important;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+.nav-cta:hover {
+  background: var(--color-crimson-dark) !important;
+}
+
+/* ハンバーガー */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================
+   ヒーローセクション
+   ============================================ */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(198, 156, 63, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(197, 61, 67, 0.1) 0%, transparent 50%),
+    linear-gradient(160deg, #0f172a 0%, #1e293b 40%, #1e3a4a 70%, #0f172a 100%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(198, 156, 63, 0.03) 40px,
+      rgba(198, 156, 63, 0.03) 41px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(198, 156, 63, 0.03) 40px,
+      rgba(198, 156, 63, 0.03) 41px
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hero-main-copy {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 0.3s forwards;
+}
+
+.hero-sub-copy {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--color-gold);
+  margin-bottom: 24px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 0.6s forwards;
+}
+
+.hero-lead {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 40px;
+  line-height: 1.9;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 0.9s forwards;
+}
+
+.hero-cta {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s 1.2s forwards;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeIn 1s 2s forwards;
+}
+
+.hero-scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  position: relative;
+}
+
+.hero-scroll-indicator span::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  animation: scrollBounce 2s infinite;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  50% { transform: translateX(-50%) translateY(12px); opacity: 0.3; }
+}
+
+/* ============================================
+   セクション2: 酒丸シリーズとは
+   ============================================ */
+.about {
+  background: var(--color-white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.about-text h2 {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  color: var(--color-text-dark);
+  line-height: 2;
+}
+
+.about-image img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 32px 16px;
+  background: var(--color-card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-crimson);
+  line-height: 1.2;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  margin-top: 8px;
+}
+
+.stat-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 4px;
+}
+
+/* ============================================
+   セクション3: アーキテクチャ図
+   ============================================ */
+.architecture {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  padding: var(--section-padding) 0;
+  overflow: hidden;
+}
+
+.architecture .section-title {
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.architecture-diagram {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.arch-layer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.arch-layer-core {
+  width: 100%;
+}
+
+.arch-node {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(198, 156, 63, 0.25);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  min-width: 140px;
+}
+
+.arch-node:hover {
+  background: rgba(198, 156, 63, 0.12);
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(198, 156, 63, 0.2);
+}
+
+.arch-node-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 8px;
+  color: var(--color-gold);
+}
+
+.arch-node-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.arch-node-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+.arch-node-core {
+  background: rgba(197, 61, 67, 0.12);
+  border-color: rgba(197, 61, 67, 0.4);
+  padding: 24px 48px;
+  min-width: 100%;
+}
+
+.arch-node-core:hover {
+  background: rgba(197, 61, 67, 0.2);
+  border-color: var(--color-crimson);
+  box-shadow: 0 8px 32px rgba(197, 61, 67, 0.2);
+}
+
+.arch-node-core .arch-node-icon {
+  color: var(--color-crimson);
+}
+
+.arch-node-core .arch-node-name {
+  font-size: 1.2rem;
+}
+
+.arch-node-detail {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+.arch-node-wide {
+  min-width: 100%;
+}
+
+/* 接続線 */
+.arch-connector {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.arch-connector-vertical::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 24px;
+  background: linear-gradient(180deg, rgba(198, 156, 63, 0.5), rgba(198, 156, 63, 0.15));
+}
+
+.arch-connector-triple {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  padding: 12px 0;
+}
+
+.arch-connector-line {
+  width: 2px;
+  height: 24px;
+  background: linear-gradient(180deg, rgba(198, 156, 63, 0.5), rgba(198, 156, 63, 0.15));
+}
+
+/* ツールチップ */
+.arch-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-navy-dark);
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+  z-index: 10;
+  border: 1px solid rgba(198, 156, 63, 0.3);
+}
+
+.arch-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-navy-dark);
+}
+
+.arch-node:hover .arch-tooltip {
+  opacity: 1;
+}
+
+/* ============================================
+   セクション4: システム詳細カード
+   ============================================ */
+.system-details {
+  background: var(--color-washi);
+}
+
+.system-details .section-title {
+  margin-bottom: 48px;
+}
+
+.system-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 40px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.system-card:last-child {
+  margin-bottom: 0;
+}
+
+.system-card-reverse {
+  direction: rtl;
+}
+
+.system-card-reverse > * {
+  direction: ltr;
+}
+
+.system-card-image img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.system-card:hover .system-card-image img {
+  transform: scale(1.02);
+}
+
+.system-card-image-group {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.system-card-image-group img:first-child {
+  flex: 1;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.system-card-image-mobile {
+  width: 30%;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.system-card-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-text-light);
+}
+
+.image-placeholder svg {
+  width: 80px;
+  height: 80px;
+}
+
+.image-placeholder span {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.system-card-header {
+  margin-bottom: 16px;
+}
+
+.system-name {
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.system-reading {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.system-subtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-crimson);
+  font-weight: 500;
+}
+
+.system-desc {
+  margin-bottom: 16px;
+  line-height: 1.9;
+}
+
+.system-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  margin-bottom: 16px;
+}
+
+.system-features li {
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  padding-left: 16px;
+  position: relative;
+}
+
+.system-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+.system-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.system-highlights span {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(30, 41, 59, 0.06);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--color-navy);
+}
+
+/* ============================================
+   セクション5: 導入メリット
+   ============================================ */
+.benefits {
+  background: var(--color-white);
+}
+
+.benefits .section-title {
+  margin-bottom: 48px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  padding: 32px 24px;
+  background: var(--color-card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-crimson);
+  margin-bottom: 16px;
+}
+
+.benefit-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+}
+
+.benefit-card > p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.benefit-card ul {
+  padding-left: 0;
+}
+
+.benefit-card li {
+  font-size: 0.85rem;
+  color: var(--color-text-dark);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.benefit-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+/* ============================================
+   セクション6: 導入フロー
+   ============================================ */
+.flow {
+  background: var(--color-washi);
+}
+
+.flow .section-title {
+  margin-bottom: 8px;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-gold), var(--color-crimson));
+}
+
+.timeline-item {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  flex-shrink: 0;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--color-washi);
+}
+
+.timeline-content {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.timeline-header h3 {
+  font-size: 1.1rem;
+  color: var(--color-navy);
+}
+
+.timeline-duration {
+  display: inline-block;
+  padding: 3px 12px;
+  background: rgba(198, 156, 63, 0.12);
+  color: var(--color-amber);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ============================================
+   セクション7: FAQ
+   ============================================ */
+.faq {
+  background: var(--color-white);
+}
+
+.faq .section-title {
+  margin-bottom: 48px;
+}
+
+.faq-category {
+  margin-bottom: 32px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-category:last-child {
+  margin-bottom: 0;
+}
+
+.faq-category-title {
+  font-size: 1.1rem;
+  color: var(--color-crimson);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(197, 61, 67, 0.15);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  transition: color var(--transition);
+}
+
+.faq-question:hover {
+  color: var(--color-crimson);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-text-light);
+  transition: transform var(--transition);
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+}
+
+.faq-answer p {
+  padding: 0 0 18px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+/* ============================================
+   セクション8: お問い合わせ
+   ============================================ */
+.contact {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact .section-title {
+  margin-bottom: 16px;
+}
+
+.contact-text {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 32px;
+  line-height: 1.9;
+}
+
+.contact-cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.contact-email {
+  margin-top: 24px;
+}
+
+.contact-email img {
+  max-width: 280px;
+  margin: 0 auto 12px;
+}
+
+.contact-email-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ============================================
+   フッター
+   ============================================ */
+.site-footer {
+  background: var(--color-navy-dark);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 48px 0 24px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.footer-company {
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.footer-nav ul {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  font-size: 0.85rem;
+  transition: color var(--transition);
+}
+
+.footer-nav a:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   スクロールアニメーション
+   ============================================ */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   レスポンシブ
+   ============================================ */
+
+/* タブレット */
+@media (max-width: 1023px) {
+  :root {
+    --section-padding: 72px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-text h2 {
+    text-align: center;
+  }
+
+  .system-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px;
+  }
+
+  .system-card-reverse {
+    direction: ltr;
+  }
+
+  .system-card-image {
+    order: -1;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arch-layer-operations {
+    flex-wrap: wrap;
+  }
+}
+
+/* モバイル */
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 56px;
+    --header-height: 60px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  /* ハンバーガーメニュー */
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 48px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .main-nav.open {
+    transform: translateX(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .main-nav a {
+    font-size: 1.1rem;
+  }
+
+  .nav-cta {
+    padding: 12px 28px !important;
+  }
+
+  /* ヒーロー */
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-lead br {
+    display: none;
+  }
+
+  /* 統計 */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  /* アーキテクチャ図 */
+  .arch-layer {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .arch-layer-top,
+  .arch-layer-operations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arch-node {
+    min-width: 200px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .arch-node-core {
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .arch-connector-triple {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    gap: 0;
+  }
+
+  .arch-connector-triple .arch-connector-line:not(:first-child) {
+    display: none;
+  }
+
+  .arch-tooltip {
+    display: none;
+  }
+
+  /* システムカード */
+  .system-card {
+    padding: 20px;
+    margin-bottom: 32px;
+    gap: 16px;
+  }
+
+  .system-features {
+    grid-template-columns: 1fr;
+  }
+
+  .system-card-image-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .system-card-image-mobile {
+    width: 60%;
+  }
+
+  /* メリット */
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* タイムライン */
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-marker {
+    width: 48px;
+  }
+
+  .timeline-step {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .timeline-content {
+    padding: 18px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* お問い合わせ */
+  .contact-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-text br {
+    display: none;
+  }
+
+  /* フッター */
+  .footer-grid {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+  }
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
